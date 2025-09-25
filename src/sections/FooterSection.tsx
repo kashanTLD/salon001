@@ -301,39 +301,6 @@ export default function FooterSection({
           </div>
         </div>
 
-        {/* Service Areas (if available) */}
-        {businessData?.serviceAreas && businessData.serviceAreas.length > 0 && (
-          <div 
-            className={`mb-12 transition-all duration-1000 delay-800 ${
-              footerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <div className="text-center mb-8">
-              <h4 className="text-lg font-semibold text-white mb-4">Service Areas</h4>
-              <div 
-                className="h-px mx-auto w-16"
-                style={{
-                  background: `linear-gradient(90deg, transparent, ${themeData?.primaryColor}, transparent)`
-                }}
-              />
-            </div>
-            <div 
-              ref={serviceAreasRef}
-              className="flex flex-wrap justify-center gap-6"
-            >
-              {businessData.serviceAreas.slice(0, 8).map((area, index) => (
-                <div
-                  key={index}
-                  className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-                  style={{ transitionDelay: `${index * 0.1}s` }}
-                >
-                  {area.city}, {area.region}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8">
           <div 

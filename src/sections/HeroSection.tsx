@@ -141,7 +141,6 @@ export default function HeroSection({
       font-weight: 400;
       letter-spacing: 0.05em;
       color: #666;
-      text-transform: uppercase;
     }
 
     .organic-button {
